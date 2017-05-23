@@ -167,7 +167,7 @@ namespace Mod02_01.Controllers
         public ActionResult DetailsByTitle(string title)
         {
             OperaContext context = new OperaContext();
-            Opera opera = context.Operas.FirstOrDefault<Opera>(o => o.Title == titile);
+            Opera opera = context.Operas.FirstOrDefault<Opera>(o => o.Title == title);
             if (opera == null)
             {
                 return HttpNotFound();
