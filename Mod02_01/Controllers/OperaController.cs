@@ -163,7 +163,7 @@ namespace Mod02_01.Controllers
             return View("Index", query);
         }
 
-        [Route("Opera/Title/{title}")]
+        [Route("Opera/Title/{title?}")]
         public ActionResult DetailsByTitle(string title)
         {
             OperaContext context = new OperaContext();
