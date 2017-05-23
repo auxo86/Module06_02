@@ -163,7 +163,8 @@ namespace Mod02_01.Controllers
             return View("Index", query);
         }
 
-        public ActionResult DetailsByTitle(string titile)
+        [Route("Opera/Title/{title}")]
+        public ActionResult DetailsByTitle(string title)
         {
             OperaContext context = new OperaContext();
             Opera opera = context.Operas.FirstOrDefault<Opera>(o => o.Title == titile);

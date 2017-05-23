@@ -13,11 +13,14 @@ namespace Mod02_01
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "OperaTitleRoute",
-                url: "opera/title/{title}",
-                defaults: new { controller = "opera", action = "DetailsByTitle", id = UrlParameter.Optional }
-            );
+            //routes.MapRoute(
+            //    name: "OperaTitleRoute",
+            //    url: "opera/title/{title}",
+            //    defaults: new { controller = "opera", action = "DetailsByTitle", id = UrlParameter.Optional }
+            //);
+
+            //使用attrib改route
+            routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
                 name: "Default",
